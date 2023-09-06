@@ -35,7 +35,26 @@ create table if not exists clientes(
         
 	-- DECLARATORIO
     
-		insert into clientes (nomeCliente,SexoCliente) values ('Suzi Rego','F'), ('Ana Melo', 'F'), ('Jorge Freitas', 'M');
+		insert into clientes (nomeCliente,SexoCliente) 
+				values 
+                ('Suzi Rego','F'), 
+                ('Ana Melo', 'F'), 
+                ('Jorge Freitas', 'M'); 
+                
+	update clientes 
+		set 
+        dataNascimento = '2000-07-12', 
+        ufNascimento = 'PR'
+        where idCliente =7;
+        
+	update clientes
+		set
+        ufNascimento = 'RJ',
+        dataNascimento = '2002-07-12' where idCliente = 4;
+        
+	update clientes
+		set
+        ufNascimento = 'MG' where ufNascimento is null;
 		
         
         select * from clientes;
