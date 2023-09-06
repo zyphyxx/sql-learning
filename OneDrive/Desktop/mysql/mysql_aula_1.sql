@@ -1,4 +1,4 @@
-describe alunos;
+describe gafanhotos;
 
 alter table alunos
 add column profissao varchar (10) after nome;
@@ -11,6 +11,9 @@ modify column profissao varchar (20);
 
 alter table alunos
 change column profissao prof varchar(20);
+
+alter table alunos
+rename to gafanhotos;
 
 
 
