@@ -55,7 +55,18 @@ create table if not exists clientes(
 	update clientes
 		set
         ufNascimento = 'MG' where ufNascimento is null;
-		
+        
+        -- DELETANDO UM ARQUIVO
+        
+	delete from clientes where idCliente = 2;
+    
+    -- DELETANDO TODA TABELA NUNCA USAR
+	
+		delete from clientes; -- CUIDADO 
+        
+	-- PAGA E RECRIA A TABELA
+    
+		truncate table clientes;
         
         select * from clientes;
         
