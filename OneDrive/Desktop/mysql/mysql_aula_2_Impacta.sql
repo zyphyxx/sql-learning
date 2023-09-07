@@ -21,7 +21,7 @@ select * from clientes;
         
         -- 	DQL DATA QUERY LANGUAGE - SELECT
         
-        select * from clientes; -- um select simples
+       
         
         select nomeCliente, dataNascimento from clientes;
         
@@ -32,6 +32,36 @@ select * from clientes;
         dataNascimento as 'Nascimento'
         from clientes;
         
+        -- SELECT COM COLUNAS FALSAS
         
-	
-    desc clientes;
+       use empresa;
+       select * from clientes;
+       
+       -- SELECT COM COLUNAS FALSAS
+       select nomeCliente as 'Nome do Cliente',
+			sexoCliente as 'Sexo',
+            ufNascimento as 'Estado',
+            dataNascimento as 'Data de Nascimento',
+            idCliente * 100 as 'Salario','Brasileiro' as 'Nacionalidade' from clientes;
+            
+		-- ORDENAÇÃO MAIOR LADRÃO DE PERFORMANCE
+        
+			select * from clientes order by ufNascimento;
+			select * from clientes order by ufNascimento asc, dataNascimento desc;
+            
+            select * from clientes limit 3;
+            select * from clientes limit 4,6;
+            
+            -- operadore de comparação
+            
+            select * from clientes where ufNascimento !='RJ';
+            select * from clientes where idCliente >= 10;
+            
+            select * from clientes where idCliente < 10 and ufNascimento != 'SP';
+            
+            desc clientes;
+            
+            
+    
+    
+    
