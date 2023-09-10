@@ -1,5 +1,14 @@
 package impacta.estacionamento.apresentacao;
 
-public class TelaSaidaVeiculo {
+import javax.swing.JFrame;
+
+public class TelaSaidaVeiculo extends JFrame {
+	
+	private JFrame parent;
+
+	public TelaSaidaVeiculo(JFrame parent) {
+		// TODO Auto-generated constructor stub
+		this.parent = parent;
+	}
 
 }

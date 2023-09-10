@@ -1,0 +1,5 @@
+url=jdbc:mysql://localhost:3306/estacionamento
+usuario=root
+senha=impacta
+insertMov = insert into TB_MOVIMENTACAO (placa,marca,modelo,cor,data_entrada) values (?,?,?,?,?)
+atualizaVaga=update TB_STATUS_VAGA set ocupadas = ? where id=1

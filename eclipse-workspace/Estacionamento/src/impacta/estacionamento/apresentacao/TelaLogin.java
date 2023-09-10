@@ -111,7 +111,7 @@ public class TelaLogin extends JFrame implements ActionListener {
 					
 					txtSenha.setText("");
 					
-					return;
+					return;	
 				}
 				
 			}
